@@ -1,6 +1,6 @@
 import express from "express";
 import eventosHandler from "./api/eventos";
-import eventosIDHandler from "./api/eventosID";
+import eventosIDHandler from "./api/eventosID"; // Relative path to eventosID.ts
 
 const app = express();
 const PORT = process.env.PORT || 3000;
