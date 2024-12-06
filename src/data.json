@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "icon": "fa-solid fa-person-dots-from-line",
+    "title": "Suerosuerraria",
+    "fecha": "20-12-2024",
+    "lugar": "Via Zoom",
+    "description": "suesuerrorira descriptoi neoa",
+    "ponente": "Columba Aparicios",
+    "imageUrl": "https://drive.google.com/file/d/1ahZ0A2W0rMUjceMeT2hCSwCmliSNlKDo/view?usp=sharing",
+    "linkZoom": "https://us06web.zoom.us/rec/share/Uwp-qWRW6RrpBwd7N54wjeWNM67v3jfBRzj68T4WbWOYalbkfLQygtCr_bGXV9Hy._kBmDC5P9Yoq3rQ5",
+    "name": "Suerosuerraria"
+  },
+  {
+    "id": "2",
+    "icon": "fa-solid fa-circle-nodes",
+    "title": "Medicina Estética",
+    "fecha": "2024-12-06",
+    "lugar": "Via Zoon",
+    "description": "Estetica de productos esteticos",
+    "ponente": "Andrés Luna",
+    "imageUrl": "https://drive.google.com/file/d/1ctmCO15YMGAt7t98qr-MOu0LdjX9dE7V/view?usp=sharing",
+    "linkZoom": "https://us06web.zoom.us/rec/share/wTC4o3oNfPRywahpXikePiAuZFHST_AuzkFGOKSNviDtNKgrXoNp7d7FIkhZYpY0.FbeculDz1K0f8ze5",
+    "name": "Medicina Estética"
+  },
+  {
+    "id": "3",
+    "icon": "fa-solid fa-circle-nodes",
+    "title": "Medicina Estética",
+    "fecha": "2024-12-02",
+    "lugar": "HospitalRegional",
+    "description": "Describir la Endocrenegetica no es fácil",
+    "ponente": "Columba Aparicio",
+    "imageUrl": "https://drive.google.com/file/d/1Yu3904_qrRsOyKAgSjGehp4N_l2lvm_U/view?usp=sharing",
+    "linkZoom": "https://us06web.zoom.us/rec/share/wTC4o3oNfPRywahpXikePiAuZFHST_AuzkFGOKSNviDtNKgrXoNp7d7FIkhZYpY0.FbeculDz1K0f8ze5",
+    "name": "Endocrenegetica"
+  },
+  {
+    "id": "4",
+    "icon": "fa-solid fa-circle-nodes",
+    "title": "Medicina Estética",
+    "fecha": "01-12-2024",
+    "lugar": "Via Zoon",
+    "description": "descripcion terapia 4",
+    "ponente": "Ponente por anunciar",
+    "imageUrl": "https://drive.google.com/file/d/1Ua1ywloa_P2Zy2uHiE8NQFkROZsvKvPy/view?usp=sharing",
+    "linkZoom": "https://us06web.zoom.us/rec/share/wTC4o3oNfPRywahpXikePiAuZFHST_AuzkFGOKSNviDtNKgrXoNp7d7FIkhZYpY0.FbeculDz1K0f8ze5",
+    "name": "Terapia IV"
+  }
+]
