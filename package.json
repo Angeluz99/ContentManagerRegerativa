@@ -18,13 +18,14 @@
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
+    "@vercel/node": "^3.2.28",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.17",
+    "@types/express": "^4.17.21",
     "@types/node": "^20.8.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
