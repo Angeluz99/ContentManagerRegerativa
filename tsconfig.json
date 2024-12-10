@@ -2,14 +2,16 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
-    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./", // Change this to the root folder
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "resolveJsonModule": true // Ensure this is enabled if you're working with JSON files
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*",
+    "api/**/*" // Include api folder as well
+  ]
 }
