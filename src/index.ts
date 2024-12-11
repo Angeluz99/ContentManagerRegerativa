@@ -7,11 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(
-  cors({
-    origin: "https://regeneratecelulasdistribucion.com",
-  })
-);
+app.use(cors()); // Enable CORS for all origins
+
 app.use(express.json()); // Middleware for handling JSON requests
 
 // Root route to check connectivity
