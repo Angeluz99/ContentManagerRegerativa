@@ -16,7 +16,7 @@ app.use(express.json()); // Middleware for handling JSON requests
 
 // Root route to check connectivity
 app.get("/", (req, res) => {
-  res.status(200).send("Backend is running and reachable!");
+  res.send("Welcome to the Content Manager API for Medicina Regenerativa!");
 });
 
 // API routes
