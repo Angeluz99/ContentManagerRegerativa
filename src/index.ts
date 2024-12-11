@@ -6,15 +6,26 @@ import eventosIDHandler from "../api/eventosID";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // Enable CORS for all origins
+// Middleware
+app.use(
+  cors({
+    origin: "https://regeneratecelulasdistribucion.com",
+  })
+);
 app.use(express.json()); // Middleware for handling JSON requests
 
+// Root route to check connectivity
+app.get("/", (req, res) => {
+  res.status(200).send("Backend is running and reachable!");
+});
+
+// API routes
+app.get("/api/eventos", eventosHandler);
+app.put("/api/eventos/:id", eventosIDHandler);
+
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
-// Define routes
-app.get("/api/eventos", eventosHandler);
-app.put("/api/eventos/:id", eventosIDHandler);
 
 export default app;
