@@ -13,7 +13,7 @@ app.use(express.json()); // Middleware for handling JSON requests
 
 // Root route to check connectivity
 app.get("/", (req, res) => {
-  res.redirect("/api/eventos");
+  res.status(200).send("Welcome! Visit /api/eventos to view the events.");
 });
 
 // API routes
