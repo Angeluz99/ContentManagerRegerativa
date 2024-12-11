@@ -13,7 +13,7 @@ app.use(express.json()); // Middleware for handling JSON requests
 
 // Root route to check connectivity
 app.get("/", (req, res) => {
-  res.send("Welcome to the Content Manager API for Medicina Regenerativa!");
+  res.redirect("/api/eventos");
 });
 
 // API routes
