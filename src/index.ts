@@ -6,7 +6,9 @@ import eventosIDHandler from "../api/eventosID";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI || "your_mongodb_connection_string"; // Replace with your actual connection string
+const MONGO_URI =
+  process.env.MONGO_URI ||
+  "mongodb+srv://angelgldiaz:Aveynada199@cluster0.cnr5stl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // Replace with your actual connection string
 
 // MongoDB Connection
 const connectDB = async () => {
