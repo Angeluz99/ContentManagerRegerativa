@@ -1,26 +1,24 @@
 import { Request, Response } from "express";
-import Event from "../models/Event"; // Your Mongoose model
+import Event from "../models/Event"; // Path to your Event model
 
 export default async function eventosIDHandler(req: Request, res: Response) {
-  const eventId = req.params.id; // Extract event ID from the route params
+  const { id } = req.params; // Extract the 'id' from the URL
+  const updatedData = req.body;
 
   try {
-    // Update the specific event by ID
-    const updatedEvent = await Event.findByIdAndUpdate(
-      eventId,
-      req.body, // The update data from the request body
-      { new: true } // Return the updated document
-    );
+    // Find the event by 'id' and update it
+    const event = await Event.findOneAndUpdate({ id }, updatedData, {
+      new: true, // Return the updated document
+      runValidators: true, // Enforce schema validation
+    });
 
-    if (!updatedEvent) {
-      console.error(`Event with ID ${eventId} not found.`);
-      return res.status(404).json({ error: "Event not found." });
+    if (!event) {
+      return res
+        .status(404)
+        .json({ message: `Event with id ${id} not found.` });
     }
 
-    console.log("Updated event:", updatedEvent); // Debug updated event
-    res
-      .status(200)
-      .json({ message: "Event updated successfully.", updatedEvent });
+    res.json({ message: "Event updated successfully.", event });
   } catch (error) {
     console.error("Error updating event:", error);
     res.status(500).json({ error: "Failed to update the event." });
