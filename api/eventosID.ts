@@ -2,21 +2,18 @@ import { Request, Response } from "express";
 import Event from "../models/Event"; // Path to your Event model
 
 export default async function eventosIDHandler(req: Request, res: Response) {
-  const { id: encodedId } = req.params; // Extract the 'id' from the URL
+  const { id } = req.params; // Extract the 'id' from the URL
   const updatedData = req.body;
 
-  // Decode the encoded id from URL parameters
-  const id = decodeURIComponent(encodedId);
+  console.log(`Received id in request.params: ${id}`);
 
-  // Log the decoded id and the updatedData being sent
-  console.log(`Updating event with id: ${id}`);
+  // Log the updated data being sent
   console.log("Updated Data:", updatedData);
 
   try {
-    // Find the event by 'id' (as a string) and update it
     const event = await Event.findOneAndUpdate({ id }, updatedData, {
-      new: true, // Return the updated document
-      runValidators: true, // Enforce schema validation
+      new: true,
+      runValidators: true,
     });
 
     if (!event) {
