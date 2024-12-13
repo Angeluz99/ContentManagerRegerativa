@@ -6,7 +6,7 @@ export default async function eventosIDHandler(req: Request, res: Response) {
   const updatedData = req.body;
 
   try {
-    // Find the event by 'id' and update it
+    // Find the event by 'id' (as a string) and update it
     const event = await Event.findOneAndUpdate({ id }, updatedData, {
       new: true, // Return the updated document
       runValidators: true, // Enforce schema validation
