@@ -9,7 +9,6 @@ interface IEvent extends Document {
   description: string;
   ponente: string;
   imageUrl: string;
-  name: string;
 }
 
 const EventSchema = new Schema<IEvent>({
@@ -21,7 +20,6 @@ const EventSchema = new Schema<IEvent>({
   description: String,
   ponente: String,
   imageUrl: String,
-  name: String,
 });
 
 const Event = mongoose.model<IEvent>("Event", EventSchema);
