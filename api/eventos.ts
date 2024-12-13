@@ -1,15 +1,32 @@
 import { Request, Response } from "express";
-import mongoose from "mongoose";
-import Event from "../models/Event"; // Corrected relative path to the Event model
+import Event from "../models/Event"; // Ensure the path to the Event model is correct
 
-// Define the API handler for fetching events
-export default async function eventosHandler(req: Request, res: Response) {
+// Fetch all events
+export async function getEventosHandler(req: Request, res: Response) {
   try {
-    // Fetch all events from MongoDB
+    // Retrieve all events from MongoDB
     const events = await Event.find({});
-    res.json(events); // Respond with the events data
+    res.json(events); // Send the events as the response
   } catch (error) {
     console.error("Error fetching events from MongoDB:", error);
     res.status(500).json({ error: "Failed to fetch events." });
+  }
+}
+
+// Add a new event
+export async function addEventHandler(req: Request, res: Response) {
+  try {
+    // Create a new Event document
+    const newEvent = new Event(req.body);
+
+    // Save the document to MongoDB
+    const savedEvent = await newEvent.save();
+
+    res
+      .status(201)
+      .json({ message: "Event created successfully.", savedEvent });
+  } catch (error) {
+    console.error("Error creating event:", error);
+    res.status(500).json({ error: "Failed to create the event." });
   }
 }
