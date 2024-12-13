@@ -9,7 +9,6 @@ interface IEvent extends Document {
   description: string;
   ponente: string;
   imageUrl: string;
-  linkZoom?: string;
   name: string;
 }
 
@@ -22,7 +21,6 @@ const EventSchema = new Schema<IEvent>({
   description: String,
   ponente: String,
   imageUrl: String,
-  linkZoom: String,
   name: String,
 });
 
