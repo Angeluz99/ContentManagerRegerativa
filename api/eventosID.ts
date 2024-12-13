@@ -5,6 +5,10 @@ export default async function eventosIDHandler(req: Request, res: Response) {
   const { id } = req.params; // Extract the 'id' from the URL
   const updatedData = req.body;
 
+  // Log the id from the URL and the updatedData being sent
+  console.log(`Updating event with id: ${id}`);
+  console.log("Updated Data:", updatedData);
+
   try {
     // Find the event by 'id' (as a string) and update it
     const event = await Event.findOneAndUpdate({ id }, updatedData, {
